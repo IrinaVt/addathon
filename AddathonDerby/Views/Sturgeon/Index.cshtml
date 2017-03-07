@@ -1,0 +1,36 @@
+﻿@model AddathonDerby.Models.TeamsModel
+@{
+    ViewData["Title"] = "Addathon Ironman Sturgeon Derby Teams Standings";
+}
+<h2>Teams Standings</h2>
+<table>
+    <tr>
+        <td>
+            <table class="score_table">
+                <tr><th>Team</th><th>Score</th></tr>
+                @foreach (var team in Model.Teams.OrderByDescending(x => x.Score))
+                {
+                    <tr>
+                        <td>
+                            <a href="/Sturgeon/Team/@team.TeamId">@team.TeamName</a>
+                        </td>
+                        <td>
+                            @team.Score
+                        </td>
+                    </tr>
+                }
+            </table>
+        </td>
+        <td style="padding-left:100px">
+            <img src="~/images/Sponsors/1s_xtreme.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/2s_fish sniffer.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/3s_per_o.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/4s_2013delta.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/5s_artscustomsliders.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/6s_pro-gear-reels.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/7s_phenixlogo.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/8s_pro-cure.png" width="300" /><br /><br />
+            <img src="~/images/Sponsors/9s_xtreme.png" width="300" /><br /><br />
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title - www.completeopinion.com</title>
+    <style>
+        body {
+            padding-top: 0px;
+            padding-left: 50px;
+            padding-bottom: 50px;
+            font-size: 26px;
+            font-family: Arial;
+        }
+
+        h1 {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        table.score_table td {
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+
+        span.red {
+            color: red;
+        }
+
+        p.smaller-text {
+            font-size: 14px;
+        }
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+    </script>
+</head>
+<body>
+    <a href="/Sturgeon/index"><img src="~/images/sturgeon2.png" width="400" height="198" border="0" alt="Ironman Sturgeon Derby" /></a><br />
+    @* Main section view *@
+    @RenderBody()
+</body>
+</html>

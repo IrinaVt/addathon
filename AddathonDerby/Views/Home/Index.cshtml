@@ -1,0 +1,14 @@
+﻿@model AddathonDerby.Models.DerbiesModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+@foreach (var derby in Model.Derbies)
+{
+    <a href="/sturgeon/index/@derby.DerbyId">@derby.DerbyName</a><br /><br />
+}
+
