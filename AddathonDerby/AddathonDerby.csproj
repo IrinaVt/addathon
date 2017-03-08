@@ -122,6 +122,7 @@
     <Content Include="images\sturgeon.png" />
     <Content Include="images\sturgeon2.png" />
     <Content Include="images\woman.png" />
+    <Content Include="Secret.txt" />
     <Content Include="Web.config" />
     <Content Include="Views\Sturgeon\AndyAdmin.cshtml" />
     <Content Include="Views\Sturgeon\AndyEditTeam.cshtml" />

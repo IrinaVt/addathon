@@ -36,9 +36,12 @@ create table sturgeonteams
 (
 	id int not null identity(1,1) primary key,
 	derby_id int not null foreign key references sturgeonderbies(id),
-	name nvarchar(200) not null unique,
+	name nvarchar(200) not null,
 	secret_string nvarchar(200) not null
 )
+go
+
+create unique index ux_sturgeonteams on sturgeonteams(derby_id, name);
 go
 
 create table sturgeonscores
@@ -53,6 +56,9 @@ go
 create unique index ux_sturgeonscores on sturgeonscores(team_id, slot);
 go
 
+sp_help sturgeonteams
+drop index sturgeonteams.UQ__sturgeon__72E12F1BD3DDE696
+alter table sturgeonteams drop constraint UQ__sturgeon__72E12F1BD3DDE696
 
 --insert sturgeonscores(team_id, slot, score) values(1, 1, 3);
 --insert sturgeonscores(team_id, slot, score) values(1, 2, 3);

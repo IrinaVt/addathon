@@ -38,6 +38,40 @@ SET IDENTITY_INSERT sturgeonteams ON
 rollback
 commit
 
+begin tran
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'BendUrRod ', 'cat');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Piedade *', 'chip');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Fish Wrestler *', 'dana');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Delta Genetics xxx', 'gage');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team DiamondBack *', 'jude');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Frank *', 'nock');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Fish Assassin''s xxx', 'rick');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Sharp Hooks *', 'alex');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Dream CRUSHER *', 'adda');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Craig *', 'baby');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Navarro *', 'barb');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Getusome *', 'caro');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Xtreme *', 'dema');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Katchemall xxx', 'dyan');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Dino *', 'emmy');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Blue Dream *', 'esta');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team XB', 'fran');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Running Late', 'gray');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Castillou', 'joni');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Fish Raiders', 'kara');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Rippers', 'lana');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team Dream Crusher card 2', 'lynn');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 23', 'neva');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 24', 'ozie');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 25', 'rose');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 26', 'tena');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 27', 'vicy');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 28', 'zola');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 29', 'wade');
+insert sturgeonteams(derby_id, name, secret_string) values(2, 'Team 30', 'toma');
+rollback
+commit
+
 select 'insert sturgeonscores(team_id, slot, score) values(' + convert(varchar(10), team_id) + ', ' + convert(varchar(10), slot) + ', ' + convert(varchar(10),score) + ');' from sturgeonscores
 
 
