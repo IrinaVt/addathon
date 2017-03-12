@@ -1,23 +1,22 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model BestFor.Sturgeon.TeamModel
+﻿@model AddathonDerby.Models.TeamModel
 @{
-    Layout = "_SturgeonLayout.cshtml";
     ViewData["Title"] = "Edit Team";
 }
 <h2>Edit Team @Model.TeamId</h2>
 <form asp-controller="Sturgeon" asp-action="AndyEditTeam" method="post" role="form">
-    <input type="hidden" asp-for="TeamId" />
+    <input type="hidden" name="TeamId" value="@Model.TeamId" />
+    <input type="hidden" name="DerbyId" value="@Model.DerbyId" />
     <table class="score_table">
         <tr>
             <td>Team</td>
-            <td><input asp-for="TeamName"/></td>
+            <td><input type="text" width="250" name="TeamName" value="@Model.TeamName" /></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input asp-for="Password" /></td>
+            <td><input type="text" width="250" name="Password" value="@Model.Password" /></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
+            <td><a href="/sturgeon/andyadmin/@Model.DerbyId">Cancel</a></td>
             <td><input type="submit" value="Submit" /></td>
         </tr>
     </table>

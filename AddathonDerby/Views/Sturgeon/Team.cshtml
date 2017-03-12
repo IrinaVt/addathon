@@ -46,7 +46,7 @@ AFTER YOU UPLOAD VIDEO TO FACEBOOK PAGE PER ADDATHON RULES ...<br />
 This will update your score, to see team standings. Visit the addathon page to see team scores.</p>
 <span class="red">@Model.ErrorMessage</span><br />
 <form asp-action="Team" method="post" role="form">
-    <input type="hidden" asp-for="TeamName" />
+    <input type="hidden" name="TeamId" value="@Model.TeamId" />
     <table class="score_table">
         <tr>
             <th>Entry</th>
@@ -57,357 +57,357 @@ This will update your score, to see team standings. Visit the addathon page to s
         </tr>
         <tr>
             <td>Entry # 1</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot1, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot1, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot1, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot1" type="radio" @Model.Checked(Model.Slot1, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot1" type="radio" @Model.Checked(Model.Slot1, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot1" type="radio" @Model.Checked(Model.Slot1, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot1</td>
         </tr>
         <tr>
             <td>Entry # 2</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot2, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot2, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot2, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot2" type="radio" @Model.Checked(Model.Slot2, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot2" type="radio" @Model.Checked(Model.Slot2, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot2" type="radio" @Model.Checked(Model.Slot2, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot2</td>
         </tr>
         <tr>
             <td>Entry # 3</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot3, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot3, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot3, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot3" type="radio" @Model.Checked(Model.Slot3, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot3" type="radio" @Model.Checked(Model.Slot3, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot3" type="radio" @Model.Checked(Model.Slot3, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot3</td>
         </tr>
         <tr>
             <td>Entry # 4</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot4, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot4, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot4, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot4" type="radio" @Model.Checked(Model.Slot4, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot4" type="radio" @Model.Checked(Model.Slot4, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot4" type="radio" @Model.Checked(Model.Slot4, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot4</td>
         </tr>
         <tr>
             <td>Entry # 5</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot5, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot5, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot5, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot5" type="radio" @Model.Checked(Model.Slot5, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot5" type="radio" @Model.Checked(Model.Slot5, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot5" type="radio" @Model.Checked(Model.Slot5, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot5</td>
         </tr>
         <tr>
             <td>Entry # 6</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot6, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot6, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot6, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot6" type="radio" @Model.Checked(Model.Slot6, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot6" type="radio" @Model.Checked(Model.Slot6, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot6" type="radio" @Model.Checked(Model.Slot6, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot6</td>
         </tr>
         <tr>
             <td>Entry # 7</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot7, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot7, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot7, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot7" type="radio" @Model.Checked(Model.Slot7, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot7" type="radio" @Model.Checked(Model.Slot7, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot7" type="radio" @Model.Checked(Model.Slot7, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot7</td>
         </tr>
         <tr>
             <td>Entry # 8</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot8, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot8, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot8, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot8" type="radio" @Model.Checked(Model.Slot8, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot8" type="radio" @Model.Checked(Model.Slot8, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot8" type="radio" @Model.Checked(Model.Slot8, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot8</td>
         </tr>
         <tr>
             <td>Entry # 9</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot9, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot9, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot9, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot9" type="radio" @Model.Checked(Model.Slot9, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot9" type="radio" @Model.Checked(Model.Slot9, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot9" type="radio" @Model.Checked(Model.Slot9, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot9</td>
         </tr>
         <tr>
             <td>Entry # 10</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot10, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot10, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot10, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot10" type="radio" @Model.Checked(Model.Slot10, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot10" type="radio" @Model.Checked(Model.Slot10, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot10" type="radio" @Model.Checked(Model.Slot10, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot10</td>
         </tr>
         <tr>
             <td>Entry # 11</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot11, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot11, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot11, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot11" type="radio" @Model.Checked(Model.Slot11, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot11" type="radio" @Model.Checked(Model.Slot11, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot11" type="radio" @Model.Checked(Model.Slot11, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot11</td>
         </tr>
         <tr>
             <td>Entry # 12</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot12, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot12, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot12, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot12" type="radio" @Model.Checked(Model.Slot12, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot12" type="radio" @Model.Checked(Model.Slot12, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot12" type="radio" @Model.Checked(Model.Slot12, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot12</td>
         </tr>
         <tr>
             <td>Entry # 13</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot13, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot13, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot13, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot13" type="radio" @Model.Checked(Model.Slot13, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot13" type="radio" @Model.Checked(Model.Slot13, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot13" type="radio" @Model.Checked(Model.Slot13, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot13</td>
         </tr>
         <tr>
             <td>Entry # 14</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot14, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot14, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot14, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot14" type="radio" @Model.Checked(Model.Slot14, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot14" type="radio" @Model.Checked(Model.Slot14, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot14" type="radio" @Model.Checked(Model.Slot14, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot14</td>
         </tr>
         <tr>
             <td>Entry # 15</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot15, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot15, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot15, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot15" type="radio" @Model.Checked(Model.Slot15, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot15" type="radio" @Model.Checked(Model.Slot15, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot15" type="radio" @Model.Checked(Model.Slot15, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot15</td>
         </tr>
         <tr>
             <td>Entry # 16</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot16, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot16, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot16, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot16" type="radio" @Model.Checked(Model.Slot16, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot16" type="radio" @Model.Checked(Model.Slot16, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot16" type="radio" @Model.Checked(Model.Slot16, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot16</td>
         </tr>
         <tr>
             <td>Entry # 17</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot17, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot17, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot17, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot17" type="radio" @Model.Checked(Model.Slot17, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot17" type="radio" @Model.Checked(Model.Slot17, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot17" type="radio" @Model.Checked(Model.Slot17, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot17</td>
         </tr>
         <tr>
             <td>Entry # 18</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot18, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot18, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot18, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot18" type="radio" @Model.Checked(Model.Slot18, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot18" type="radio" @Model.Checked(Model.Slot18, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot18" type="radio" @Model.Checked(Model.Slot18, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot18</td>
         </tr>
         <tr>
             <td>Entry # 19</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot19, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot19, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot19, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot19" type="radio" @Model.Checked(Model.Slot19, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot19" type="radio" @Model.Checked(Model.Slot19, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot19" type="radio" @Model.Checked(Model.Slot19, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot19</td>
         </tr>
         <tr>
             <td>Entry # 20</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot20, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot20, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot20, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot20" type="radio" @Model.Checked(Model.Slot20, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot20" type="radio" @Model.Checked(Model.Slot20, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot20" type="radio" @Model.Checked(Model.Slot20, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot20</td>
         </tr>
         <tr>
             <td>Entry # 21</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot21, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot21, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot21, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot21" type="radio" @Model.Checked(Model.Slot21, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot21" type="radio" @Model.Checked(Model.Slot21, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot21" type="radio" @Model.Checked(Model.Slot21, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot21</td>
         </tr>
         <tr>
             <td>Entry # 22</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot22, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot22, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot22, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot22" type="radio" @Model.Checked(Model.Slot22, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot22" type="radio" @Model.Checked(Model.Slot22, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot22" type="radio" @Model.Checked(Model.Slot22, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot22</td>
         </tr>
         <tr>
             <td>Entry # 23</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot23, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot23, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot23, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot23" type="radio" @Model.Checked(Model.Slot23, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot23" type="radio" @Model.Checked(Model.Slot23, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot23" type="radio" @Model.Checked(Model.Slot23, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot23</td>
         </tr>
         <tr>
             <td>Entry # 24</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot24, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot24, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot24, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot24" type="radio" @Model.Checked(Model.Slot24, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot24" type="radio" @Model.Checked(Model.Slot24, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot24" type="radio" @Model.Checked(Model.Slot24, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot24</td>
         </tr>
         <tr>
             <td>Entry # 25</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot25, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot25, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot25, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot25" type="radio" @Model.Checked(Model.Slot25, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot25" type="radio" @Model.Checked(Model.Slot25, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot25" type="radio" @Model.Checked(Model.Slot25, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot25</td>
         </tr>
         <tr>
             <td>Entry # 26</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot26, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot26, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot26, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot26" type="radio" @Model.Checked(Model.Slot26, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot26" type="radio" @Model.Checked(Model.Slot26, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot26" type="radio" @Model.Checked(Model.Slot26, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot26</td>
         </tr>
         <tr>
             <td>Entry # 27</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot27, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot27, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot27, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot27" type="radio" @Model.Checked(Model.Slot27, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot27" type="radio" @Model.Checked(Model.Slot27, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot27" type="radio" @Model.Checked(Model.Slot27, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot27</td>
         </tr>
         <tr>
             <td>Entry # 28</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot28, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot28, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot28, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot28" type="radio" @Model.Checked(Model.Slot28, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot28" type="radio" @Model.Checked(Model.Slot28, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot28" type="radio" @Model.Checked(Model.Slot28, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot28</td>
         </tr>
         <tr>
             <td>Entry # 29</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot29, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot29, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot29, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot29" type="radio" @Model.Checked(Model.Slot29, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot29" type="radio" @Model.Checked(Model.Slot29, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot29" type="radio" @Model.Checked(Model.Slot29, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot29</td>
         </tr>
         <tr>
             <td>Entry # 30</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot30, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot30, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot30, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot30" type="radio" @Model.Checked(Model.Slot30, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot30" type="radio" @Model.Checked(Model.Slot30, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot30" type="radio" @Model.Checked(Model.Slot30, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot30</td>
         </tr>
         <tr>
             <td>Entry # 31</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot31, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot31, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot31, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot31" type="radio" @Model.Checked(Model.Slot31, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot31" type="radio" @Model.Checked(Model.Slot31, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot31" type="radio" @Model.Checked(Model.Slot31, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot31</td>
         </tr>
         <tr>
             <td>Entry # 32</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot32, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot32, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot32, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot32" type="radio" @Model.Checked(Model.Slot32, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot32" type="radio" @Model.Checked(Model.Slot32, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot32" type="radio" @Model.Checked(Model.Slot32, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot32</td>
         </tr>
         <tr>
             <td>Entry # 33</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot33, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot33, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot33, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot33" type="radio" @Model.Checked(Model.Slot33, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot33" type="radio" @Model.Checked(Model.Slot33, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot33" type="radio" @Model.Checked(Model.Slot33, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot33</td>
         </tr>
         <tr>
             <td>Entry # 34</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot34, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot34, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot34, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot34" type="radio" @Model.Checked(Model.Slot34, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot34" type="radio" @Model.Checked(Model.Slot34, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot34" type="radio" @Model.Checked(Model.Slot34, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot34</td>
         </tr>
         <tr>
             <td>Entry # 35</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot35, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot35, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot35, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot35" type="radio" @Model.Checked(Model.Slot35, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot35" type="radio" @Model.Checked(Model.Slot35, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot35" type="radio" @Model.Checked(Model.Slot35, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot35</td>
         </tr>
         <tr>
             <td>Entry # 36</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot36, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot36, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot36, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot36" type="radio" @Model.Checked(Model.Slot36, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot36" type="radio" @Model.Checked(Model.Slot36, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot36" type="radio" @Model.Checked(Model.Slot36, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot36</td>
         </tr>
         <tr>
             <td>Entry # 37</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot37, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot37, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot37, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot37" type="radio" @Model.Checked(Model.Slot37, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot37" type="radio" @Model.Checked(Model.Slot37, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot37" type="radio" @Model.Checked(Model.Slot37, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot37</td>
         </tr>
         <tr>
             <td>Entry # 38</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot38, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot38, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot38, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot38" type="radio" @Model.Checked(Model.Slot38, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot38" type="radio" @Model.Checked(Model.Slot38, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot38" type="radio" @Model.Checked(Model.Slot38, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot38</td>
         </tr>
         <tr>
             <td>Entry # 39</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot39, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot39, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot39, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot39" type="radio" @Model.Checked(Model.Slot39, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot39" type="radio" @Model.Checked(Model.Slot39, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot39" type="radio" @Model.Checked(Model.Slot39, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot39</td>
         </tr>
         <tr>
             <td>Entry # 40</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot40, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot40, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot40, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot40" type="radio" @Model.Checked(Model.Slot40, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot40" type="radio" @Model.Checked(Model.Slot40, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot40" type="radio" @Model.Checked(Model.Slot40, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot40</td>
         </tr>
         <tr>
             <td>Entry # 41</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot41, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot41, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot41, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot41" type="radio" @Model.Checked(Model.Slot41, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot41" type="radio" @Model.Checked(Model.Slot41, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot41" type="radio" @Model.Checked(Model.Slot41, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot41</td>
         </tr>
         <tr>
             <td>Entry # 42</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot42, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot42, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot42, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot42" type="radio" @Model.Checked(Model.Slot42, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot42" type="radio" @Model.Checked(Model.Slot42, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot42" type="radio" @Model.Checked(Model.Slot42, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot42</td>
         </tr>
         <tr>
             <td>Entry # 43</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot43, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot43, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot43, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot43" type="radio" @Model.Checked(Model.Slot43, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot43" type="radio" @Model.Checked(Model.Slot43, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot43" type="radio" @Model.Checked(Model.Slot43, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot43</td>
         </tr>
         <tr>
             <td>Entry # 44</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot44, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot44, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot44, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot44" type="radio" @Model.Checked(Model.Slot44, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot44" type="radio" @Model.Checked(Model.Slot44, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot44" type="radio" @Model.Checked(Model.Slot44, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot44</td>
         </tr>
         <tr>
             <td>Entry # 45</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot45, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot45, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot45, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot45" type="radio" @Model.Checked(Model.Slot45, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot45" type="radio" @Model.Checked(Model.Slot45, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot45" type="radio" @Model.Checked(Model.Slot45, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot45</td>
         </tr>
         <tr>
             <td>Entry # 46</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot46, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot46, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot46, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot46" type="radio" @Model.Checked(Model.Slot46, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot46" type="radio" @Model.Checked(Model.Slot46, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot46" type="radio" @Model.Checked(Model.Slot46, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot46</td>
         </tr>
         <tr>
             <td>Entry # 47</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot47, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot47, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot47, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot47" type="radio" @Model.Checked(Model.Slot47, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot47" type="radio" @Model.Checked(Model.Slot47, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot47" type="radio" @Model.Checked(Model.Slot47, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot47</td>
         </tr>
         <tr>
             <td>Entry # 48</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot48, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot48, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot48, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot48" type="radio" @Model.Checked(Model.Slot48, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot48" type="radio" @Model.Checked(Model.Slot48, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot48" type="radio" @Model.Checked(Model.Slot48, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot48</td>
         </tr>
         <tr>
             <td>Entry # 49</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot49, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot49, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot49, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot49" type="radio" @Model.Checked(Model.Slot49, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot49" type="radio" @Model.Checked(Model.Slot49, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot49" type="radio" @Model.Checked(Model.Slot49, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot49</td>
         </tr>
         <tr>
             <td>Entry # 50</td>
-            <td>Shaker <input type="radio" @Model.Checked(Model.Slot50, 3) value="3" data-waschecked="false" /></td>
-            <td>Slot <input type="radio" @Model.Checked(Model.Slot50, 9) value="9" data-waschecked="false" /></td>
-            <td>Oversize <input type="radio" @Model.Checked(Model.Slot50, 5) value="5" data-waschecked="false" /></td>
+            <td>Shaker   <input name="Slot50" type="radio" @Model.Checked(Model.Slot50, 3) value="3" data-waschecked="false" /></td>
+            <td>Slot     <input name="Slot50" type="radio" @Model.Checked(Model.Slot50, 9) value="9" data-waschecked="false" /></td>
+            <td>Oversize <input name="Slot50" type="radio" @Model.Checked(Model.Slot50, 5) value="5" data-waschecked="false" /></td>
             <td>@Model.Slot50</td>
         </tr>
         <tr>
             <td>Passsword</td>
-            <td colspan="2"><input asp-for="Password" type="password" /></td>
+            <td colspan="2"><input name="Password" type="password" /></td>
             <td>Total</td>
             <td>@Model.Score</td>
         </tr>

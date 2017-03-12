@@ -10,5 +10,11 @@ namespace AddathonDerby.Controllers
             var model = GetDerbies();
             return View(model);
         }
+
+        public ActionResult AndyAdmin()
+        {
+            var model = GetDerbies();
+            return View(model);
+        }
     }
 }

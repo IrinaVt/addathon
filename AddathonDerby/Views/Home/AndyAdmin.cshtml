@@ -1,0 +1,23 @@
+﻿@model AddathonDerby.Models.DerbiesModel
+@{
+    ViewBag.Title = "Admin Page";
+}
+
+<h2>Admin Page</h2>
+
+<a href="/home/index">Home</a><br /><br />
+
+@foreach (var derby in Model.Derbies)
+{
+    <a href="/sturgeon/andyadmin/@derby.DerbyId">@derby.DerbyName</a> 
+    if (derby.IsOpen)
+    {
+        <span>(OPEN)</span>
+    }
+    else
+    {
+        <span>(CLOSED)</span>
+    }
+    <br /><br />
+}
+

@@ -18,9 +18,11 @@ namespace AddathonDerby.Controllers
         }
 
         [HttpGet]
-        public ActionResult AndyAdmin()
+        public ActionResult AndyAdmin(int id)
         {
-            var model = LoadAll(0);
+            TeamsModel model = new TeamsModel();
+            if (id <= 0) return View(model);
+            model = LoadAll(id);
             return View(model);
         }
 
@@ -81,9 +83,9 @@ namespace AddathonDerby.Controllers
                 try
                 {
                     string password = null;
-                    using (SqlCommand command = new SqlCommand("select id, secret_string from sturgeonteams where team_id = @team_id", con))
+                    using (SqlCommand command = new SqlCommand("select id, secret_string, derby_id, name from sturgeonteams where id = @team_id", con))
                     {
-                        command.Parameters.Add(new SqlParameter("name", model.TeamId));
+                        command.Parameters.Add(new SqlParameter("team_id", model.TeamId));
                         var reader = command.ExecuteReader();
                         if (reader.HasRows)
                         {
@@ -91,6 +93,8 @@ namespace AddathonDerby.Controllers
                             {
                                 model.TeamId = reader.GetInt32(0);
                                 password = reader.GetString(1);
+                                model.DerbyId = reader.GetInt32(2);
+                                model.TeamName = reader.GetString(3);
                             }
                         }
                         reader.Close();
@@ -99,6 +103,27 @@ namespace AddathonDerby.Controllers
                     if (model.Password != password)
                     {
                         model.ErrorMessage = "Invalid password";
+                        return View(model);
+                    }
+
+                    bool isOpen = false;
+                    using (SqlCommand command = new SqlCommand("select is_open from sturgeonderbies where id = @id", con))
+                    {
+                        command.Parameters.Add(new SqlParameter("id", model.DerbyId));
+                        var reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                isOpen = reader.GetBoolean(0);
+                            }
+                        }
+                        reader.Close();
+                    }
+
+                    if (!isOpen)
+                    {
+                        model.ErrorMessage = "This derby is closed";
                         return View(model);
                     }
 
@@ -132,7 +157,7 @@ end", con))
                     throw ex;
                 }
             }
-            return RedirectToAction("Index", "Sturgeon", new { id = model.TeamId });
+            return RedirectToAction("Index", "Sturgeon", new { id = model.DerbyId });
         }
 
         private TeamsModel LoadAll(int derbyId)
@@ -145,7 +170,10 @@ end", con))
                 try
                 {
                     // Load teams
-                    using (SqlCommand command = new SqlCommand("select id, name, secret_string from sturgeonteams where derby_id = @derby_id", con))
+                    using (SqlCommand command = new SqlCommand(@"select t.id, t.name, t.secret_string, d.name derby_name
+from sturgeonteams t
+    join sturgeonderbies d on d.id = t.derby_id
+where t.derby_id = @derby_id", con))
                     {
                         command.Parameters.Add(new SqlParameter("derby_id", derbyId));
                         var reader = command.ExecuteReader();
@@ -159,6 +187,7 @@ end", con))
                                     Password = reader["secret_string"].ToString(),
                                     TeamId = reader.GetInt32(0)
                                 });
+                                model.DerbyName = reader["derby_name"].ToString();
                             }
                         }
                         reader.Close();
@@ -204,7 +233,7 @@ where t.derby_id = @derby_id", con))
                 con.Open();
                 try
                 {
-                    using (SqlCommand command = new SqlCommand("select name, secret_string from sturgeonteams where id = @id", con))
+                    using (SqlCommand command = new SqlCommand("select name, secret_string, derby_id from sturgeonteams where id = @id", con))
                     {
                         command.Parameters.Add(new SqlParameter("id", model.TeamId));
                         var reader = command.ExecuteReader();
@@ -214,6 +243,7 @@ where t.derby_id = @derby_id", con))
                             {
                                 model.TeamName = reader.GetString(0);
                                 model.Password = reader.GetString(1);
+                                model.DerbyId = reader.GetInt32(2);
                             }
                         }
                         reader.Close();
@@ -250,7 +280,7 @@ where t.derby_id = @derby_id", con))
                     throw ex;
                 }
             }
-            return RedirectToAction("AndyAdmin");
+            return RedirectToAction("AndyAdmin", new { id = team.DerbyId } );
         }
     }
 

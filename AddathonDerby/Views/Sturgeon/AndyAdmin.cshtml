@@ -1,13 +1,13 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model BestFor.Sturgeon.TeamsModel
+﻿@model AddathonDerby.Models.TeamsModel
 @{
-    Layout = "_SturgeonLayout.cshtml";
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Admin page";
 }
+<h2>Admin page (Derby: @Model.DerbyName)</h2>
 
-<h2>Teams Standings</h2>
+<a href="/home/AndyAdmin">Home</a><br /><br />
+
 <table class="score_table">
-    <tr><td>Team</td><td>Score</td><td>Password</td></tr>
+    <tr><td>Id</td><td>Team</td><td>Score</td><td>Password</td></tr>
     @foreach (var team in Model.Teams)
     {
         <tr>
@@ -15,7 +15,7 @@
                 @team.TeamId
             </td>
             <td>
-                <a asp-controller="Sturgeon" asp-action="Team" asp-route-id="@team.TeamName">@team.TeamName</a>
+                <a href="/Sturgeon/Team/@team.TeamId">@team.TeamName</a>
             </td>
             <td>
                 @team.Score
@@ -24,7 +24,7 @@
                 @team.Password
             </td>
             <td>
-                <a asp-controller="Sturgeon" asp-action="AndyEditTeam" asp-route-id="@team.TeamId">Edit</a>
+                <a href="/Sturgeon/AndyEditTeam/@team.TeamId">Edit</a>
             </td>
         </tr>
     }

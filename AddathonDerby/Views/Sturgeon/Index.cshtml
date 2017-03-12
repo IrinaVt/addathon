@@ -2,10 +2,10 @@
 @{
     ViewData["Title"] = "Addathon Ironman Sturgeon Derby Teams Standings";
 }
-<h2>Teams Standings</h2>
+<h2>Teams Standings (Derby: @Model.DerbyName)</h2>
 <table>
     <tr>
-        <td>
+        <td valign="top">
             <table class="score_table">
                 <tr><th>Team</th><th>Score</th></tr>
                 @foreach (var team in Model.Teams.OrderByDescending(x => x.Score))

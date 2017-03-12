@@ -6,6 +6,7 @@ namespace AddathonDerby.Models
     {
         public List<TeamModel> Teams { get; set; }
 
+        public string DerbyName { get; set; }
         public TeamsModel()
         {
             Teams = new List<TeamModel>();

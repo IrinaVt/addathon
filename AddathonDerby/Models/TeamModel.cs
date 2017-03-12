@@ -10,6 +10,8 @@
 
         public string Password { get; set; }
 
+        public int DerbyId { get; set; }
+
         public int Slot1 { get; set; }
 
         public int Slot2 { get; set; }
